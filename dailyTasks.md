@@ -35,3 +35,25 @@ Create a snapshot policy from EBS Volume
 Create a Volume from Snapshot
 
 ---------------------
+Create a VPC with dns enabled with 172.31.0.0/16 CIDR range
+
+Create 2 Public Subnet with /24 CIDR range
+
+Create 2 Private Subnet with /24 CIDR range
+
+Create a Public and Private Route Tables and associate the public and private subnets to route tables accordingly
+
+Create a Internet Gateway and attach to VPC
+
+Add a route for IGW in Public Route table with 0.0.0.0/0 source
+
+Create a Nat Gateway associated to a Public Subnet and Elastic IP
+
+Add a route for NGW in Private Route table with 0.0.0.0/0 source
+
+Read about Layer 4 and Layer 7 networks further
+
+------------------------
+
+
+
