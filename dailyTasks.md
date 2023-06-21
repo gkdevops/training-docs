@@ -55,5 +55,22 @@ Read about Layer 4 and Layer 7 networks further
 
 ------------------------
 
+AWS RDS CLI Tools to install to test the RDS connectivity
 
+Install Java 11 using below link
+https://www.oracle.com/java/technologies/downloads/#java11
+
+Install Oracle Basic Client and SQLPlus addon from below link
+https://www.oracle.com/database/technologies/instant-client/linux-x86-64-downloads.html
+
+RDS Tutorial
+https://aws.amazon.com/getting-started/hands-on/create-oracle-se2-instance-in-multi-az-deployment-on-amazon-rds/
+
+RDS Connectivity Errors
+https://repost.aws/knowledge-center/rds-oracle-connection-errors
+
+AWS RePost for AWS provided solutions
+https://repost.aws/
+
+------------------------
 
