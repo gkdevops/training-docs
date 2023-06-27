@@ -74,3 +74,11 @@ https://repost.aws/
 
 ------------------------
 
+Understand what is checksum for a file and what are the usescases
+
+Learn md5sum, sha256sum commands
+
+Write a shell script to compare 2 files using their checksum
+
+------------------------
+
