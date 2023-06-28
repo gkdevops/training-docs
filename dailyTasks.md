@@ -82,4 +82,29 @@ Write a shell script to compare 2 files using their checksum
 
 ------------------------
 
+GIT:
 https://git-scm.com/
+
+Agile Project:
+
+1 copy of code
+
+Sprint: 15 to 21 typically, where dev team will write the code and test and finally on last day we deploy the code to Production
+
+new code for a business req
+
+during this time there is a production issue, live code has a issue
+Now, we will fix the live issue and add code to github and deploy
+
+if we already added some new code to github for new feature, this will be 
+
+1. Revert back all code changes part of new sprint
+   then add Prod fix and deploy code
+
+There are 2 different features being built
+2 dev, each working on different feature
+
+2 features, 1 is short term: 145 days
+long term feature: 
+
+Of creating multiple branches and each branch will have it own version history from its parent then its own history later.
