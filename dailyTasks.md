@@ -108,3 +108,48 @@ There are 2 different features being built
 long term feature: 
 
 Of creating multiple branches and each branch will have it own version history from its parent then its own history later.
+
+-----------------------------
+
+
+Build Script: pom.xml ( Maven build script )
+
+<dependency>
+    <groupId>org.apache.pdfbox</groupId>
+    <artifactId>pdfbox</artifactId>
+    <version>2.0.28</version>
+</dependency>
+
+mvn Default Lifecycle:
+
+Compile: mvn compile
+1. Download all dependency 3rd party packages for main directory code
+2. Compiles all Java code under main directory
+   .class files for all the code in main directory
+
+Test Compile: mvn test-compile
+1. Download all dependency 3rd party packages of test directory code
+2. Compiles all Java code under test directory
+
+Only Unit Test cases are written in the test directory
+
+Test: mvn test
+1. It will execute the Unit test cases and provide the results
+
+Package: mvn package
+We have 10's to 100's of .class files, these files can't be easily managed. Either during deployment, running code, copying code
+1. It will package all the code into a single file
+
+   .jar //Modern microservcies spring,springboot: java archive
+   .war //have some UI code, with ejb,struts, hibernate. web archive
+   .ear // enterprise archive: it can have multiple wars + jars
+
+Final Goal: a single file, which we take and deploy to servers.
+----
+Maven CLean Lifecycle:
+There a lot of junk/unneceassary files generated during build process
+those all will be deleted.
+
+mvn clean
+
+---------------------
