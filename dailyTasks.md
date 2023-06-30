@@ -153,3 +153,9 @@ those all will be deleted.
 mvn clean
 
 ---------------------
+
+Java Install in Amazon Linux: https://cloudkatha.com/how-to-install-openjdk-11-on-amazon-linux-2/
+
+Assignment: https://github.com/gkdevops/PetClinic
+
+---------------------
