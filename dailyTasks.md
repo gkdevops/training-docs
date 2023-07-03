@@ -278,7 +278,7 @@ yum:
   state: latest
 
 We can write our own custom module:
--------
+
 name: Install nginx
 yum:
   name: nginx
