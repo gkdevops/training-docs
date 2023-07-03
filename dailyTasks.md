@@ -159,3 +159,155 @@ Java Install in Amazon Linux: https://cloudkatha.com/how-to-install-openjdk-11-o
 Assignment: https://github.com/gkdevops/PetClinic
 
 ---------------------
+
+Webservers
+App Servers
+Database Servers
+
+We have alteast 4 environments: all servers will be 4 sets
+Prod we will have many, dev we will 1 or 2 for each application
+
+We will have a lot of app servers
+
+We install, setup, configure, deploy and patch Operating Systems.
+ensuring to maintain the exact configuration continously on all servers.
+
+on hundereds on machines:
+
+shell scripts are being written for a very long time:
+bash scripting: This a set of linux commands written in a file.
+bash scripts are hard to understand, troubleshoot and debug.
+logging is not mature.
+
+python: not everyone can write.
+
+Configuration Management Tools: are category of tools which help to automate Linux/windows or manage Operating System configurations.
+
+Puppet -> Ruby
+Chef ->
+Ansible -> 
+Salt Stack ->
+
+Installing Apache
+Installing Tomcat
+Creating Users
+Crearting groups
+mouting storage
+
+ensuring all the same configration is applied to all resources of same category.
+
+petclinic.war needs to be deployed to 5 servers
+
+stop existing version of code
+clear/delete old code
+copy new code
+if any config changes of tomcat
+start application
+do a small health check
+
+dev,sit,uat and prod
+
+installed tomcat
+setup all configuration of tomcat
+deployed code
+
+It should be ensured to be matched 24x7
+kernel properties, os properties, tomcat properties, docker proeprties
+
+Ansible code is written in YAML syntax
+syntax is just to define a configuration:
+
+100 lines of ansible code using YAML
+it executes from line 1 to 100
+
+Agent and Server concept is very popular and used very often to manage distributed systems.
+
+monitoring tools:
+CEntral Server: which will collect all the data from all servers
+ALl servers: will have a agent installed, which collect data and send to Central Server.
+
+Agentless:
+No need of special ports and no need of any ssl certs:
+Chef and Puppet: special port opened and ssl certs were needed
+
+Ansible: doesn't need any special port opened:
+openSSH: secure by default: SSH connection to a server
+
+SSH Keys for securing remote access to servers.
+
+Ansible Controller Node: The server where we install Ansible Tool
+Remote Nodes: 
+
+Pre-requisite tool: Python is mandatory for ansible to run.
+We can't even install ansible without python
+
+Python is mandatory on all remote machines
+
+user management in linux:
+
+creation of user
+lock/unlock a user
+delete user
+update a user
+add to groups
+
+Module is a python program written by ansible team to perform all the known possible activites of the user management/system task.
+
+to call this module and provide our inputs/ fill in the blanks.
+
+3000's modules:
+Each module target one specific system activity
+
+package mangement
+time/date
+user
+group
+stop/start services
+kernel properties
+networking
+change hostname
+
+Networking Modules:
+Cisco: addNetwork
+
+package:
+install, upgrade, uninstall a package
+
+yum:
+  name: httpd
+  state: latest
+
+We can write our own custom module:
+-------
+name: Install nginx
+yum:
+  name: nginx
+  state: installed
+
+template:
+  src: /opt
+  dest: /opt/
+
+service:
+  name: nginx
+  state: restarted
+
+Ansible will convert this YAML to python code by filling data and then it will copy this python code to remote nodes
+then it will execute the python code which is copied in remote nodes
+
+server by server
+Parallely for all servers. ( we can control max parallel servers)
+
+Ansible Controller: does everything
+
+When u write code, we place the code only in controller machine.
+
+Controller will push the code to remote nodes and execute it.
+
+Chef/Puppet: Code is in Puppet Server
+
+Puppet Agents: Will pull the code from Puppet Server
+
+IaC: store the code in GitHub
+
+-------------------------
