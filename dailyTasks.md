@@ -311,3 +311,65 @@ Puppet Agents: Will pull the code from Puppet Server
 IaC: store the code in GitHub
 
 -------------------------
+
+https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
+
+https://docs.ansible.com/ansible/latest/collections/index.html#list-of-collections
+
+https://docs.ansible.com/ansible/latest/collections/ansible/builtin/index.html#plugins-in-ansible-builtin
+
+Ansible Community Package version: 8, Ansible Core on 2.15
+
+Install Ansible as root
+sudo su -
+pip --version
+pip3 --version
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3 get-pip.py
+sudo python3 -m pip install ansible
+
+Execute Ansible: 2 ways
+
+Adhoc Method: ansible ....
+Playbook Method: ansible-playbook ...
+
+SSH keys based authentication:
+We need to generate ssh keys and share to remote nodes.
+not required to do this on remote nodes.
+
+Ansible in AWS:
+1. We a discovery script to auto generate the Inventory file
+2. You need to ensure to copy the public cert to all new VM's part of user-data
+
+Ping Module:
+1. Connect to remote node
+2. verify the authentication available
+3. Check if python is installed or not
+
+ON Prem inventory is kind of stable or unchanged
+
+Adhoc Command Syntax:
+
+ansible <inventory_group_name> -m <module name> -a <aruguments>
+ansible <IP/Hostname> -m <module name> -a <aruguments>
+
+ansible webservers -m yum -a "name=tree state=present"
+
+Ansible:
+Legacy applications which are running on VM's ( EC2, VMware )
+
+Microservies, which are running on Docker, Kubernetes
+
+Idompotency:
+Before applying the code
+It will compare the current state with the desired state
+If any deviation, then only it apply code, if not it will take no action
+
+Ensuing the system state doesn't effect by executing over and over
+
+Install,Setup, 1 time config, deploy
+
+Ensuring the state of the system is always as expected
+java 1.8.1
+
+-------------------
