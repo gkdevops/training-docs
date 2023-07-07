@@ -373,3 +373,21 @@ Ensuring the state of the system is always as expected
 java 1.8.1
 
 -------------------
+
+How do you Plan to write your ansible code for the automation task/request?
+
+understand the requirements
+which servers are part of automation for inventory management
+OS version of servers
+What tools need to be installed, any pre-requsities
+What is the goal.
+
+
+1. Perform all the steps manually to achieve requirement.
+2. Once performed manually, we will convert each linux command to a ansible module.
+3. testing and finalize
+
+Ansible-Lint: to check and provide code syntax and best practices.
+https://ansible.readthedocs.io/projects/lint/usage/
+
+----------------------
