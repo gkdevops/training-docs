@@ -391,3 +391,85 @@ Ansible-Lint: to check and provide code syntax and best practices.
 https://ansible.readthedocs.io/projects/lint/usage/
 
 ----------------------
+
+Ansible Galaxy: https://galaxy.ansible.com/
+
+Ansible Module:
+
+We may need to automate same activity for different teams, applications, teams with cusomizations
+
+Install, Configure and Setup Nginx:
+
+Customization:
+Port number
+location of apache config files
+install version
+apache web server properties: logging level, redirection,
+ssl config
+certificates location
+
+Tomcat:
+Elastic Stack:
+
+
+1. Write a Ansible Playbook customized for each team and maintain it
+   10 teams, we will 10 playbooks and maintain them.
+
+2. Write a common ansible code which is reusable across multiple teams
+   Ansible Module
+   through variables, we will allow the teams to customize
+
+When the amount of code is increasing to 100's of lines, then using Module
+
+
+ansible-module
+ansible-galaxy
+
+Modules can be shared to others. The web portal where we upload the modules is called Ansible Galaxy
+
+meta: information about the module.
+
+Both used to define variables
+Defaults: define the variables which we plan to override
+vars: variable which will not be overridden
+
+Best Practice:
+All the variables defined part of the Module, needs to start with module name
+
+tasks: To define the tasks required for ansible automation
+
+Files handled part of the Ansible Module:
+to copy files from Controller Node to Remote Nodes
+
+copy:
+  src: 
+
+
+Ansible desired state/idompotent:
+file: touch
+service: restart
+
+Ansible Code: 
+
+service:
+  name: httpd
+  state: restarted
+
+why restart is needed for applications:
+config changes:
+code changes:
+
+handlers: Allow conditional execution of ansible tasks.
+
+If there is a change, then only run the task, if not ignore.
+based on depdency with other task.
+
+copy:
+ok state: success and no change needed. 
+changed state: success and change made to make on remote node
+Handlers are only triggered when changed state is recieved.
+
+For module, we don't have header section
+We need to write a playbook and then call the module from that playbook
+
+--------------------
