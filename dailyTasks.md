@@ -473,3 +473,23 @@ For module, we don't have header section
 We need to write a playbook and then call the module from that playbook
 
 --------------------
+
+Docker: Create RHEL or Ubuntu VM
+https://docs.docker.com/engine/install/rhel/
+
+Pre-requisites:
+sudo yum install -y yum-utils
+
+Package Repo:
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+Install Command:
+sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+Post Install:
+sudo systemctl status docker
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -a -G docker ec2-user
+
+---------------------
