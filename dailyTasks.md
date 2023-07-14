@@ -516,3 +516,13 @@ Detached Mode ( background mode )
 foreground mode
 
 -----------------------
+
+Dockerfile:
+Best Practise: 
+Dockerfile should be stored along with source code at the top level directory structure in git
+Dockerfile should always be executed from the location is it placed on server.
+
+Hadolint: https://github.com/hadolint/hadolint
+To scan Dockerfiles for syntax, security enhancements and best practices for Instructions.
+
+-----------------------
