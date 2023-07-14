@@ -493,3 +493,26 @@ sudo systemctl enable docker
 sudo usermod -a -G docker ec2-user
 
 ---------------------
+
+https://docs.docker.com/engine/reference/commandline/dockerd/#description
+
+docker image:
+Without docker image, we cannot create a docker container.
+
+We can either create our own customer image
+we can also download any existing docker image from Docker Hub ( Docker Registry )
+
+Docker Registry: Any software which will store, allow to upload ( versions ) and download docker images, its called a Docker Registry
+
+Base Images:
+Every docker image we create, will have a base image. The OS files
+
+Docker Images:
+
+<Image Name>:<Tag Name>
+httpd:
+
+Detached Mode ( background mode )
+foreground mode
+
+-----------------------
