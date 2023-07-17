@@ -526,3 +526,10 @@ Hadolint: https://github.com/hadolint/hadolint
 To scan Dockerfiles for syntax, security enhancements and best practices for Instructions.
 
 -----------------------
+
+Docker Image creation best practices:
+
+https://sysdig.com/blog/dockerfile-best-practices/
+https://blog.aquasec.com/docker-security-best-practices
+
+-----------------------
