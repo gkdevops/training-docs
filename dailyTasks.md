@@ -538,3 +538,53 @@ AWS EBS CSI Driver Implementation in EKS:
 https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html
 
 -----------------------
+
+Jenkins Introduction:
+
+CI:
+
+Jenkins
+Azure DevOps
+GitHub Actions:
+GitLab CI:
+
+Continous Integration:
+To ensure developers are checking in code to VSC each time they change it and we need to ensure that this code needs to be verified each time by compiling, running unit tests and building packages to have confidence that the code works as expected.
+If this fails, we notify developers immediately and then they perform the fix without going to next stage.
+We also will detect issues between developers also.
+
+Developers check code to Central Code Repository
+CI Jobs triggers automatically:
+
+1. Code checkout from Github
+2. Compile the code and run unit test cases using maven
+3. Scan code using code quality tool like SonarQube (SAST Tool) + Check for issues and fail the build if critical issues found.
+4. Scan code using to any 3rd party vulnerabilities imported by code (SCA Tool) Snyk, if critical issues are found, we can stop build.
+5. Generate the package using maven ( .jar/.war)
+6. Create Docker image using Dockerfile
+7. Scan Docker Image (Trivy) & Upload the Docker image to registry
+
+CD:
+We deploy the code to approriate environment.
+
+Legacy: Ansible
+Stop the app
+remove old code
+deploy new code
+Start the app
+
+Containers: Helm/Kubectl
+Update the new image tag
+apply the deployment.yaml
+
+Run Functional and UI Testing
+Send notification
+We will deploy code in Continous Delivery/Deployment
+
+Argo CD:
+
+java -jar jenkins.war
+
+Local user management should never be performed.
+
+-----------------
